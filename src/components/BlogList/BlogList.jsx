@@ -8,6 +8,8 @@ const BlogList = () => {
 
   const handleAddBlog = (newBlog) => {
       setBlogPosts([newBlog, ...blogPosts]);
+      console.log(newBlog);
+      console.log(blogPosts);
   };
 
   return (
