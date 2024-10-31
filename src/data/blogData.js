@@ -1,4 +1,4 @@
-[
+export const blogData = [
   {
       "baslik": "Girişimcilikte Başarıyı Yakalamak",
       "icerik": "Başarıya ulaşmak için girişimcilerin dikkat etmesi gereken birçok etken var...",
@@ -60,3 +60,4 @@
       "tarih": "2024-10-21"
   }
 ]
+export default blogData
