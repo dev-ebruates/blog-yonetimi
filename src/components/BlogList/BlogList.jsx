@@ -14,7 +14,7 @@ const BlogList = () => {
 
   return (
       <div className="blog-list-container">
-          <AddNewBlog onAddBlog={handleAddBlog} />
+         
           {blogPosts.map((post, index) => (
               <BlogItem
                   key={index}
@@ -24,6 +24,7 @@ const BlogList = () => {
                   tarih={post.tarih}
               />
           ))}
+           <AddNewBlog onAddBlog={handleAddBlog} />
       </div>
   );
 };

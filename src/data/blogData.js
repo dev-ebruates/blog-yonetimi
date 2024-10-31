@@ -1,63 +1,63 @@
 export const blogData = [
   {
-      "baslik": "Girişimcilikte Başarıyı Yakalamak",
-      "icerik": "Başarıya ulaşmak için girişimcilerin dikkat etmesi gereken birçok etken var...",
-      "yazar": "Merve Aydın",
-      "tarih": "2024-10-30"
+    "baslik": "2024 Sonbahar/Kis Moda Trendleri",
+    "icerik": "2024 sonbahar ve kis sezonunda o­ne cikan moda trendlerini kesfedin. Parlak renkler, buyuk omuzlar ve rahat kesimler bu sezonun en dikkat cekici parçalari arasinda. Bu yazida, bu trendleri nasil kombinleyebileceginizi ve stilinizi nasil yansitacaginizı ogrenebilirsiniz.",
+    "yazar": "Ece Polat",
+    "tarih": "2024-10-31"
   },
   {
-      "baslik": "Dijital Pazarlama Trendleri",
-      "icerik": "2024'te dijital pazarlamada öne çıkan trendler ve uygulamalar...",
-      "yazar": "Ali Yılmaz",
-      "tarih": "2024-10-29"
+    "baslik": "Klasik Parcaların Modern Yorumu",
+    "icerik": "Klasik moda parçalari her zaman gecerliğini korur. Ancak, onları modern bir sekilde nasil yorumlayabileceginizi bu yazida kesfedin. Bir blazer ceket, beyaz gomlek veya klasik bir elbise ile neler yapabileceginizi ogrenin.",
+    "yazar": "Merve Yıldız",
+    "tarih": "2024-10-30"
   },
   {
-      "baslik": "Verimli Çalışmanın Sırları",
-      "icerik": "Verimliliği artırmak için uygulayabileceğiniz pratik ipuçları...",
-      "yazar": "Ayşe Demir",
-      "tarih": "2024-10-28"
+    "baslik": "Surdurulebilir Moda: Gelecek Icin Bir Adim",
+    "icerik": "Surdurulebilir moda, cevresel etkileri en aza indirmek icin giderek daha fazla onem kazanıyor. Bu yazida, surdurulebilir markalari, kullanilan malzemeleri ve ekolojik modanin nasil uygulanabilecegini inceliyoruz.",
+    "yazar": "Fatma Tekin",
+    "tarih": "2024-10-29"
   },
   {
-      "baslik": "Yapay Zeka ve Gelecek",
-      "icerik": "Yapay zekanın geleceğimizi nasıl şekillendireceğine dair öngörüler...",
-      "yazar": "Berk Şahin",
-      "tarih": "2024-10-27"
+    "baslik": "Yazin En Trend Aksesuarları",
+    "icerik": "Yaz aylarinda sikliginizi tamamlayacak en trend aksesuarları bu yazida bulabilirsiniz. Sapka, canta, taki gibi parçalarin nasil kombinlenecegine dair pratik ipucları sunuyoruz.",
+    "yazar": "Deniz Yılmaz",
+    "tarih": "2024-10-28"
   },
   {
-      "baslik": "Sağlıklı Yaşamın Temel İlkeleri",
-      "icerik": "Sağlıklı bir yaşam için beslenme ve egzersiz alışkanlıkları...",
-      "yazar": "Esra Kaya",
-      "tarih": "2024-10-26"
+    "baslik": "Vintage Moda: Gecmisin Izleri",
+    "icerik": "Vintage moda, gecmisten gelen stilleri modern hayata entegre etmek icin harika bir firsat sunuyor. Bu yazida, vintage parçalari nasil bulabileceginizi ve stilinize nasil dahil edebileceginizi kesfedin.",
+    "yazar": "Selin Çetin",
+    "tarih": "2024-10-27"
   },
   {
-      "baslik": "Uzaktan Çalışma İçin Verimlilik İpuçları",
-      "icerik": "Evden çalışırken verimliliğinizi artıracak öneriler...",
-      "yazar": "Mehmet Karaca",
-      "tarih": "2024-10-25"
+    "baslik": "Renk Teorisi: Moda Kombinlerinde Dogru Renk Secimi",
+    "icerik": "Moda kombinlerinizde dogru renkleri secmek, gorunuminizi tamamlamak icin onemlidir. Renk teorisini ve farkli renk kombinasyonlari ile nasil sikliginizi artirabileceginizi bu yazida ogrenin.",
+    "yazar": "Cemre Korkmaz",
+    "tarih": "2024-10-26"
   },
   {
-      "baslik": "2024 Yılı İçin Finansal Öngörüler",
-      "icerik": "2024 yılı için finansal piyasalar ve yatırımlar hakkında tahminler...",
-      "yazar": "Canan Özsoy",
-      "tarih": "2024-10-24"
+    "baslik": "Ofis Stili: Sik ve Rahat Kombinler",
+    "icerik": "Ofiste hem sik hem de rahat gorunmek mumkun! Bu yazida, ofis stiliniz icin ideal kombin onerileri ve dikkat etmeniz gereken ipuclarini bulabilirsiniz.",
+    "yazar": "Derya Aydın",
+    "tarih": "2024-10-25"
   },
   {
-      "baslik": "Minimalizm Nedir? Nasıl Uygulanır?",
-      "icerik": "Minimalizmin temel prensipleri ve hayatınıza nasıl adapte edebileceğiniz...",
-      "yazar": "Elif Tunç",
-      "tarih": "2024-10-23"
+    "baslik": "Kis Moda Gardirobunu Nasil Olusturmalısınız?",
+    "icerik": "Kis ayları icin ideal bir moda gardirobu olusturmak istiyorsaniz, vazgecilmez parçalariniza goz atmalısınız. Bu yazida, kis sezonunda bulundurmanız gereken temel giysileri ve kombin onerilerini kesfedin.",
+    "yazar": "Seda Demir",
+    "tarih": "2024-10-24"
   },
   {
-      "baslik": "Sosyal Medya Bağımlılığından Kurtulmak",
-      "icerik": "Sosyal medya bağımlılığını azaltmak için öneriler...",
-      "yazar": "Deniz Çelik",
-      "tarih": "2024-10-22"
+    "baslik": "Influencer Modası: Takip Edilmesi Gereken İsimler",
+    "icerik": "Sosyal medya influencer'ları, gunumuz moda dunyasinda buyuk bir etkiye sahip. Bu yazida, takip etmeniz gereken influencer'ları ve onların stillerinden nasil ilham alabileceginizi inceleyecegiz.",
+    "yazar": "Ali Erdem",
+    "tarih": "2024-10-23"
   },
   {
-      "baslik": "Kariyer Gelişiminde Mentörlüğün Rolü",
-      "icerik": "Mentörlüğün kariyer gelişimindeki etkisi ve önemine dair bilgiler...",
-      "yazar": "Gülhan Özcan",
-      "tarih": "2024-10-21"
+    "baslik": "Moda Haftalari: 2024'te Neler Olacak?",
+    "icerik": "Dunya genelinde duzenlenen moda haftalari, en son trendlerin ve stillerin sergilendigi onemli etkinliklerdir. Bu yazida, 2024'teki moda haftalarinda nelerin one cıkacagini ve hangi tasarımcıların dikkat cekecegini ogrenin.",
+    "yazar": "Zeynep Güneş",
+    "tarih": "2024-10-22"
   }
 ]
-export default blogData
+export default blogData;
