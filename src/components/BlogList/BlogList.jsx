@@ -1,10 +1,19 @@
 import BlogItem from "./BlogItem";
 import blogData from "../../data/blogData";
+import { useState } from "react";
+import AddNewBlog from "./AddNewBlog";
 
 const BlogList = () => {
+  const [blogPosts, setBlogPosts] = useState(blogData);
+
+  const handleAddBlog = (newBlog) => {
+      setBlogPosts([newBlog, ...blogPosts]);
+  };
+
   return (
       <div className="blog-list-container">
-          {blogData.map((post, index) => (
+          <AddNewBlog onAddBlog={handleAddBlog} />
+          {blogPosts.map((post, index) => (
               <BlogItem
                   key={index}
                   baslik={post.baslik}
@@ -16,4 +25,5 @@ const BlogList = () => {
       </div>
   );
 };
+
 export default BlogList;
