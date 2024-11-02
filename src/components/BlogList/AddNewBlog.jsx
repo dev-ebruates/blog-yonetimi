@@ -3,6 +3,8 @@ import "./AddNewBlog.css";
 import Button from "../UI/Button";
 
 const AddNewBlog = ({ onAddBlog }) => {
+ 
+
   const [formData, setFormData] = useState({
     baslik: "",
     icerik: "",
@@ -12,6 +14,7 @@ const AddNewBlog = ({ onAddBlog }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.log(name, value);
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -22,7 +25,17 @@ const AddNewBlog = ({ onAddBlog }) => {
     e.preventDefault();
 
     // Blog verisi oluştur ve BlogList'e ekle
-    onAddBlog(formData);
+    if (
+      !formData.baslik ||
+      !formData.icerik ||
+      !formData.yazar ||
+      !formData.tarih
+    ) {
+      alert("Lutfen tum alanlari doldurunuz");
+    } else {
+      onAddBlog(formData);
+    }
+   
 
     // Formu temizle
     setFormData({
