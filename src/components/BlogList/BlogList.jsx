@@ -1,16 +1,9 @@
 import BlogItem from "./BlogItem";
-import blogData from "../../data/blogData";
-import { useState } from "react";
-import AddNewBlog from "./AddNewBlog";
+import PropTypes from "prop-types";
 
-const BlogList = () => {
-  const [blogPosts, setBlogPosts] = useState(blogData);
 
-  const handleAddBlog = (newBlog) => {
-      setBlogPosts([newBlog, ...blogPosts]);
-      console.log(newBlog);
-      console.log(blogPosts);
-  };
+const BlogList = ({blogPosts}) => {
+ 
 
   return (
       <div className="blog-list-container">
@@ -24,9 +17,14 @@ const BlogList = () => {
                   tarih={post.tarih}
               />
           ))}
-           <AddNewBlog onAddBlog={handleAddBlog} />
+     
       </div>
   );
+  
 };
+BlogList.propTypes = {
+  blogPosts: PropTypes.array.isRequired
+};
+
 
 export default BlogList;
