@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./AddNewBlog.css";
 import Button from "../UI/Button";
-
+import { v4 as uuidv4 } from "uuid";
 
 const AddNewBlog = ({ onAddBlog }) => {
- 
-
   const [formData, setFormData] = useState({
+    id: uuidv4(),
     baslik: "",
     icerik: "",
     yazar: "",
@@ -36,7 +35,6 @@ const AddNewBlog = ({ onAddBlog }) => {
     } else {
       onAddBlog(formData);
     }
-   
 
     // Formu temizle
     setFormData({
