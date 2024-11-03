@@ -47,17 +47,18 @@ export const blogData = [
     "yazar": "Seda Demir",
     "tarih": "2024-10-24"
   },
+  
+  {
+    "baslik": "Moda Haftalari: 2024'te Neler Olacak?",
+    "icerik": "Dunya genelinde duzenlenen moda haftalari, en son trendlerin ve stillerin sergilendigi onemli etkinliklerdir. Bu yazida, 2024'teki moda haftalarinda nelerin one cıkacagini ve hangi tasarımcıların dikkat cekecegini ogrenin.",
+    "yazar": "Zeynep Güneş",
+    "tarih": "2024-10-22"
+  },
   {
     "baslik": "Influencer Modası: Takip Edilmesi Gereken İsimler",
     "icerik": "Sosyal medya influencer'ları, gunumuz moda dunyasinda buyuk bir etkiye sahip. Bu yazida, takip etmeniz gereken influencer'ları ve onların stillerinden nasil ilham alabileceginizi inceleyecegiz.",
     "yazar": "Ali Erdem",
     "tarih": "2024-10-23"
   },
-  {
-    "baslik": "Moda Haftalari: 2024'te Neler Olacak?",
-    "icerik": "Dunya genelinde duzenlenen moda haftalari, en son trendlerin ve stillerin sergilendigi onemli etkinliklerdir. Bu yazida, 2024'teki moda haftalarinda nelerin one cıkacagini ve hangi tasarımcıların dikkat cekecegini ogrenin.",
-    "yazar": "Zeynep Güneş",
-    "tarih": "2024-10-22"
-  }
 ]
 export default blogData;

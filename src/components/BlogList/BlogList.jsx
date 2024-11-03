@@ -1,11 +1,9 @@
 import { useState } from "react";
 import BlogItem from "./BlogItem";
 import PropTypes from "prop-types";
-import './BlogList.css'
+import "./BlogList.css";
 
-
-const BlogList = ({blogPosts}) => {
- 
+const BlogList = ({ blogPosts }) => {
   // Arama terimi için state tanımla
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -15,37 +13,36 @@ const BlogList = ({blogPosts}) => {
   };
 
   // Filtreleme fonksiyonu: girilen terimi içeren öğeleri döndürür
-  const filteredBlogPosts = blogPosts.filter(item =>
-     (item.baslik + " " + item.icerik + " " + item.yazar + " " + item.tarih).toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredBlogPosts = blogPosts.filter((item) =>
+    (item.baslik + " " + item.icerik + " " + item.yazar + " " + item.tarih)
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase())
   );
 
   return (
-      <div className="blog-list-container">
-        <input 
+    <div className="blog-list-container">
+      <input
         type="text"
         placeholder="Aramak için yazın..."
         value={searchTerm}
         onChange={handleSearch}
         className="search-input"
       />
-         
-          {filteredBlogPosts.map((post, index) => (
-              <BlogItem
-                  key={index}
-                  baslik={post.baslik}
-                  icerik={post.icerik}
-                  yazar={post.yazar}
-                  tarih={post.tarih}
-              />
-          ))}
-     
-      </div>
+
+      {filteredBlogPosts.map((post, index) => (
+        <BlogItem
+          key={index}
+          baslik={post.baslik}
+          icerik={post.icerik}
+          yazar={post.yazar}
+          tarih={post.tarih}
+        />
+      ))}
+    </div>
   );
-  
 };
 BlogList.propTypes = {
-  blogPosts: PropTypes.array.isRequired
+  blogPosts: PropTypes.array.isRequired,
 };
-
 
 export default BlogList;
