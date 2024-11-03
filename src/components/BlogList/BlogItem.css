@@ -16,3 +16,18 @@
   font-size: 0.9em;
   color: #3a1406;
 }
+
+.button-container {
+  position: absolute;
+  top:8px; /* Üstten boşluk */
+  right: 8px; /* Sağdan boşluk */
+  display: flex; /* Yan yana dizmek için */
+  gap: 4px; /* Butonlar arasındaki boşluk */
+}
+
+
+.icon {
+  font-size: 20px;
+  opacity: 1; /* İkon başlangıçta görünür */
+  transition: opacity 0.3s;
+}

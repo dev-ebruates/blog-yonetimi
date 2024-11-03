@@ -12,17 +12,17 @@
 }
 
 .custom-button.secondary {
-  background-color: #6c757d;
+  background-color: #bcaca2;
   color: white;
 }
 
 .custom-button.success {
-  background-color: #28a745;
+  background-color: #bcaca2;
   color: white;
 }
 
 .custom-button.danger {
-  background-color: #dc3545;
+  background-color: #bcaca2;
   color: white;
 }
 
@@ -46,3 +46,4 @@
   cursor: not-allowed;
   color: #a0a0a0;
 }
+
