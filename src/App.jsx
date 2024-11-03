@@ -6,6 +6,16 @@ import { useState } from "react";
 import staticBlogData from "./data/blogData";
 
 const App = () => {
+  const [blogPosts, setBlogPosts] = useState(staticBlogData);
+  const [isSorted, setIsSorted] = useState(false);
+ 
+
+//DELETE
+  const handleDeleteBlog = (id) => {
+    const updatedBlogPosts = blogPosts.filter(blog => blog.id !== id);
+    setBlogPosts(updatedBlogPosts)
+    localStorage.setItem("localBlogData", JSON.stringify(updatedBlogPosts));
+  };
   // localStorage.clear();
   let blogData = localStorage.getItem("localBlogData") === null ? null : JSON.parse(localStorage.getItem("localBlogData"));
   if(blogData === null){
@@ -13,8 +23,7 @@ const App = () => {
     localStorage.setItem("localBlogData", JSON.stringify(blogData));
   }
   
-  const [blogPosts, setBlogPosts] = useState(blogData);
-  const [isSorted, setIsSorted] = useState(false);
+  
 
   const handleAddBlog = (newBlog) => {
       blogPosts.push(newBlog);
@@ -34,7 +43,7 @@ const App = () => {
       <button onClick={sortByDate}>
         {isSorted ? 'Tarihe Göre Sıralı' : 'Tarihe Göre Sırala'}
       </button>
-      <BlogList blogPosts={blogPosts}/>
+      <BlogList blogPosts={blogPosts} handleDeleteBlog={handleDeleteBlog}/>
       <AddNewBlog onAddBlog={handleAddBlog} />
     </div>
   )
