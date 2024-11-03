@@ -32,10 +32,12 @@ const BlogList = ({ blogPosts }) => {
       {filteredBlogPosts.map((post, index) => (
         <BlogItem
           key={index}
+          id={post.id}
           baslik={post.baslik}
           icerik={post.icerik}
           yazar={post.yazar}
           tarih={post.tarih}
+
         />
       ))}
     </div>
