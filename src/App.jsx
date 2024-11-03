@@ -6,8 +6,7 @@ import { useState } from "react";
 import staticBlogData from "./data/blogData";
 
 const App = () => {
-  const [blogPosts, setBlogPosts] = useState(staticBlogData);
-  const [isSorted, setIsSorted] = useState(false);
+
  
 
 //DELETE
@@ -22,6 +21,8 @@ const App = () => {
     blogData = staticBlogData;
     localStorage.setItem("localBlogData", JSON.stringify(blogData));
   }
+  const [blogPosts, setBlogPosts] = useState(blogData);
+  const [isSorted, setIsSorted] = useState(false);
   
   
 
