@@ -6,12 +6,12 @@
   background-color: #bcaca2;
 }
 .search-input {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
   
 }
 
@@ -19,3 +19,21 @@
   border-color: #007BFF;
   outline: none;
 }
+.search-container {
+  display: flex; /* Flexbox kullanarak öğeleri yan yana yerleştirir */
+  justify-content: center; /* Dikey olarak ortalar */
+}
+
+.search-input {
+  margin-right: 10px; /* Buton ile arada boşluk bırakır */
+}
+.search-button {
+  height: 50px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+

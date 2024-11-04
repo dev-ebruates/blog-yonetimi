@@ -39,8 +39,8 @@ const App = () => {
   return (
     <div>
       <img className="blogImages" src={blogImages} alt="blogImages" />
-      <button onClick={sortByDate}>Tarihe göre sırala</button>
-      <BlogList blogPosts={blogPosts} handleDeleteBlog={handleDeleteBlog} />
+      
+      <BlogList blogPosts={blogPosts} handleDeleteBlog={handleDeleteBlog} sortByDate={sortByDate} />
       <AddNewBlog onAddBlog={handleAddBlog} />
     </div>
   );

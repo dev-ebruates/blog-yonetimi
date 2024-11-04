@@ -3,7 +3,7 @@ import BlogItem from "./BlogItem";
 import PropTypes from "prop-types";
 import "./BlogList.css";
 
-const BlogList = ({ blogPosts, handleDeleteBlog }) => {
+const BlogList = ({ blogPosts, handleDeleteBlog, sortByDate }) => {
   // Arama terimi için state tanımla
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -21,13 +21,16 @@ const BlogList = ({ blogPosts, handleDeleteBlog }) => {
 
   return (
     <div className="blog-list-container">
-      <input
-        type="text"
-        placeholder="Aramak için yazın..."
-        value={searchTerm}
-        onChange={handleSearch}
-        className="search-input"
-      />
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Aramak için yazın..."
+          value={searchTerm}
+          onChange={handleSearch}
+          className="search-input"
+        />
+        <button className="search-button" onClick={sortByDate}>Sırala</button>
+      </div>
 
       {filteredBlogPosts.map((post, index) => (
         <BlogItem
@@ -38,7 +41,6 @@ const BlogList = ({ blogPosts, handleDeleteBlog }) => {
           yazar={post.yazar}
           tarih={post.tarih}
           handleDeleteBlog={handleDeleteBlog}
-      
         />
       ))}
     </div>
@@ -48,6 +50,7 @@ BlogList.propTypes = {
   blogPosts: PropTypes.array.isRequired,
   handleDeleteBlog: PropTypes.func,
   handleUpdateBlog: PropTypes.func,
+  sortByDate: PropTypes.func,
 };
 
 export default BlogList;
