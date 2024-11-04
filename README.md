@@ -1,4 +1,6 @@
-# React + Vite
+# Blog Yönetim Uygulaması
+
+Bu uygulama, kullanıcıların blog yazılarını yönetmesine olanak tanır. Blog yazılarının listelenmesi, yeni yazı eklenmesi ve yazı detaylarının görüntülenmesi gibi işlemler yapılmaktadır.
 
 ## Gereksinimler
 
@@ -7,7 +9,7 @@
 - npm install
 
 çalıştırma:
--npm run dev
+- npm run dev
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
