@@ -3,7 +3,7 @@ import BlogItem from "./BlogItem";
 import PropTypes from "prop-types";
 import "./BlogList.css";
 
-const BlogList = ({ blogPosts, handleDeleteBlog, handleAddBlog }) => {
+const BlogList = ({ blogPosts, handleDeleteBlog }) => {
   // Arama terimi için state tanımla
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -18,7 +18,6 @@ const BlogList = ({ blogPosts, handleDeleteBlog, handleAddBlog }) => {
       .toLowerCase()
       .includes(searchTerm.toLowerCase())
   );
-  console.log(blogPosts);
 
   return (
     <div className="blog-list-container">
@@ -39,7 +38,6 @@ const BlogList = ({ blogPosts, handleDeleteBlog, handleAddBlog }) => {
           yazar={post.yazar}
           tarih={post.tarih}
           handleDeleteBlog={handleDeleteBlog}
-          handleAddBlog={handleAddBlog}
       
         />
       ))}
@@ -50,7 +48,6 @@ BlogList.propTypes = {
   blogPosts: PropTypes.array.isRequired,
   handleDeleteBlog: PropTypes.func,
   handleUpdateBlog: PropTypes.func,
-  handleAddBlog: PropTypes.func,
 };
 
 export default BlogList;
