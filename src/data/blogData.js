@@ -3,13 +3,13 @@ export const blogData = [
     "baslik": "2024 Sonbahar/Kis Moda Trendleri",
     "icerik": "2024 sonbahar ve kis sezonunda o­ne cikan moda trendlerini kesfedin. Parlak renkler, buyuk omuzlar ve rahat kesimler bu sezonun en dikkat cekici parçalari arasinda. Bu yazida, bu trendleri nasil kombinleyebileceginizi ve stilinizi nasil yansitacaginizı ogrenebilirsiniz.",
     "yazar": "Ece Polat",
-    "tarih": "2024-10-31"
+    "tarih": "2024-09-31"
   },
   {"id":"a6960eed-67a7-4d22-a711-d736099cae66",
     "baslik": "Klasik Parcaların Modern Yorumu",
     "icerik": "Klasik moda parçalari her zaman gecerliğini korur. Ancak, onları modern bir sekilde nasil yorumlayabileceginizi bu yazida kesfedin. Bir blazer ceket, beyaz gomlek veya klasik bir elbise ile neler yapabileceginizi ogrenin.",
     "yazar": "Merve Yıldız",
-    "tarih": "2024-10-30"
+    "tarih": "2024-11-30"
   },
   {"id":"64027ef7-3cd0-4bb7-9c64-2ba3d1f217d9",
     "baslik": "Surdurulebilir Moda: Gelecek Icin Bir Adim",
@@ -21,7 +21,7 @@ export const blogData = [
     "baslik": "Yazin En Trend Aksesuarları",
     "icerik": "Yaz aylarinda sikliginizi tamamlayacak en trend aksesuarları bu yazida bulabilirsiniz. Sapka, canta, taki gibi parçalarin nasil kombinlenecegine dair pratik ipucları sunuyoruz.",
     "yazar": "Deniz Yılmaz",
-    "tarih": "2024-10-28"
+    "tarih": "2024-11-28"
   },
   {"id":"563b2b36-c4bf-48bb-bdbe-74c8dde14e79",
     "baslik": "Vintage Moda: Gecmisin Izleri",
