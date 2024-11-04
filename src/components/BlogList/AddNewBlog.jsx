@@ -3,7 +3,7 @@ import "./AddNewBlog.css";
 import Button from "../UI/Button";
 import { v4 as uuidv4 } from "uuid";
 
-const AddNewBlog = ({ onAddBlog}) => {
+const AddNewBlog = ({ handleAddBlog}) => {
   
 
   const [formData, setFormData] = useState({
@@ -35,7 +35,7 @@ const AddNewBlog = ({ onAddBlog}) => {
     ) {
       alert("Lutfen tum alanlari doldurunuz");
     } else {
-      onAddBlog(formData);
+      handleAddBlog(formData);
     }
 
     // Formu temizle

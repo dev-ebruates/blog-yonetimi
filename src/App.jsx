@@ -40,8 +40,8 @@ const App = () => {
     <div>
       <img className="blogImages" src={blogImages} alt="blogImages" />
       <button onClick={sortByDate}>Tarihe göre sırala</button>
-      <BlogList blogPosts={blogPosts} handleDeleteBlog={handleDeleteBlog} />
-      <AddNewBlog onAddBlog={handleAddBlog} />
+      <BlogList blogPosts={blogPosts} handleDeleteBlog={handleDeleteBlog} handleAddBlog={handleAddBlog}   />
+      <AddNewBlog handleAddBlog={handleAddBlog} />
     </div>
   );
 };
