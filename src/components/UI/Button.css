@@ -1,0 +1,49 @@
+.custom-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.custom-button.primary {
+  background-color: #bcaca2;
+  color: white;
+}
+
+.custom-button.secondary {
+  background-color: #bcaca2;
+  color: white;
+}
+
+.custom-button.success {
+  background-color: #bcaca2;
+  color: white;
+}
+
+.custom-button.danger {
+  background-color: darkred;
+  color: white;
+}
+
+.custom-button.small {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.custom-button.medium {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.custom-button.large {
+  font-size: 20px;
+  padding: 15px 30px;
+}
+
+.custom-button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+  color: #a0a0a0;
+}
+
