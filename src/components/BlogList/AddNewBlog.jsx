@@ -2,60 +2,55 @@ import { useState } from "react";
 import "./AddNewBlog.css";
 import Button from "../UI/Button";
 import { v4 as uuidv4 } from "uuid";
+import PropTypes from "prop-types";
 
-const AddNewBlog = ({ onAddBlog}) => {
-  
+const AddNewBlog = ({ addBlogPost }) => {
+  const createEmptyFormData = () => {
+    return {
+      id: uuidv4(),
+      baslik: "",
+      icerik: "",
+      yazar: "",
+      tarih: new Date().toISOString().split("T")[0],
+    };
+  };
 
-  const [formData, setFormData] = useState({
-    id: uuidv4(),
-    baslik: "",
-    icerik: "",
-    yazar: "",
-    tarih: "",
-  });
+  const [formData, setFormData] = useState(createEmptyFormData());
 
-  const handleChange = (e) => {
+  const inputChanged = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const submit = (e) => {
     e.preventDefault();
-
-    // Blog verisi oluştur ve BlogList'e ekle
-    if (
-      !formData.baslik ||
-      !formData.icerik ||
-      !formData.yazar ||
-      !formData.tarih
-    ) {
+    if (validateForm()) {
       alert("Lutfen tum alanlari doldurunuz");
     } else {
-      onAddBlog(formData);
+      addBlogPost(formData);
     }
-
-    // Formu temizle
-    setFormData({
-      baslik: "",
-      icerik: "",
-      yazar: "",
-      tarih: "",
-    });
+    setFormData(createEmptyFormData());
   };
 
+  const validateForm = () => {
+    return !formData.baslik ||
+    !formData.icerik ||
+    !formData.yazar ||
+    !formData.tarih;
+  }
+
   return (
-    <form onSubmit={handleSubmit} className="form">
+    <form onSubmit={submit} className="form">
       <h2>Yeni Blog Yazısı Ekle</h2>
       <input
         type="text"
         name="baslik"
         placeholder="Başlık"
         value={formData.baslik}
-        onChange={handleChange}
+        onChange={inputChanged}
         className="input"
         required
       />
@@ -63,7 +58,7 @@ const AddNewBlog = ({ onAddBlog}) => {
         name="icerik"
         placeholder="İçerik"
         value={formData.icerik}
-        onChange={handleChange}
+        onChange={inputChanged}
         className="textarea"
         required
       />
@@ -72,7 +67,7 @@ const AddNewBlog = ({ onAddBlog}) => {
         name="yazar"
         placeholder="Yazar"
         value={formData.yazar}
-        onChange={handleChange}
+        onChange={inputChanged}
         className="input"
         required
       />
@@ -80,19 +75,22 @@ const AddNewBlog = ({ onAddBlog}) => {
         type="date"
         name="tarih"
         value={formData.tarih}
-        onChange={handleChange}
+        onChange={inputChanged}
         className="input"
         required
       />
       <Button
         label="Yeni Blog Ekle"
         type="submit"
-        onClick={handleSubmit}
         color="primary"
         size="medium"
       />
     </form>
   );
+};
+
+AddNewBlog.propTypes = {
+  addBlogPost: PropTypes.func.isRequired
 };
 
 export default AddNewBlog;

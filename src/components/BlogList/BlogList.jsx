@@ -1,9 +1,40 @@
 import BlogItem from "./BlogItem";
 import PropTypes from "prop-types";
 import "./BlogList.css";
+import { useEffect, useState } from "react";
 
-const BlogList = ({ searchTerm, handleDeleteBlog, sortByDate, handleSearch, filteredBlogPosts }) => {
- 
+const BlogList = ({
+  blogPosts,
+  deleteBlogPost,
+  editBlogPost
+}) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredBlogs, setFilteredBlogs] = useState(blogPosts);
+  const [sortOrder, setSortOrder] = useState('ascending');
+
+  const search = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const toggleSortOrder = () => {
+    setSortOrder((prevOrder) => (prevOrder === 'ascending' ? 'descending' : 'ascending'));
+  };
+
+  useEffect(() => {
+    const results = blogPosts.filter((blog) =>
+      blog.baslik.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      blog.icerik.toLowerCase().includes(searchTerm.toLowerCase()) || blog.yazar.toLowerCase().includes(searchTerm.toLowerCase()) || blog.tarih.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    results.sort((a, b) => {
+      if (sortOrder === 'ascending') {
+        return a.baslik.localeCompare(b.baslik);
+      } else {
+        return b.baslik.localeCompare(a.baslik);
+      }
+    });
+    setFilteredBlogs(results);
+  }, [searchTerm, blogPosts, sortOrder]);
 
   return (
     <div className="blog-list-container">
@@ -12,32 +43,34 @@ const BlogList = ({ searchTerm, handleDeleteBlog, sortByDate, handleSearch, filt
           type="text"
           placeholder="Aramak için yazın..."
           value={searchTerm}
-          onChange={handleSearch}
+          onChange={search}
           className="search-input"
         />
-        <button className="search-button" onClick={sortByDate}>Sırala</button>
+        <button onClick={toggleSortOrder} className="search-button">
+        {sortOrder === 'ascending' ? 'Azalan' : 'Artan'}
+      </button>
       </div>
 
-      {filteredBlogPosts.map((post, index) => (
+      {filteredBlogs.map((p) => (
         <BlogItem
-          key={index}
-          id={post.id}
-          baslik={post.baslik}
-          icerik={post.icerik}
-          yazar={post.yazar}
-          tarih={post.tarih}
-          handleDeleteBlog={handleDeleteBlog}
+          key={p.id}
+          blogPost = {p}
+          id={p.id}
+          baslik={p.baslik}
+          icerik={p.icerik}
+          yazar={p.yazar}
+          tarih={p.tarih}
+          deleteBlogPost={deleteBlogPost}
+          editBlogPost={editBlogPost}
         />
       ))}
     </div>
   );
 };
 BlogList.propTypes = {
-  filteredBlogPosts: PropTypes.array.isRequired,
-  searchTerm: PropTypes.string.isRequired,
-  handleDeleteBlog: PropTypes.func.isRequired,
-  sortByDate: PropTypes.func.isRequired,
-  handleSearch: PropTypes.func.isRequired
+  blogPosts: PropTypes.array.isRequired,
+  deleteBlogPost: PropTypes.func.isRequired,
+  editBlogPost: PropTypes.func.isRequired
 };
 
 export default BlogList;
