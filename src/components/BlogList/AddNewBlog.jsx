@@ -80,7 +80,7 @@ const AddNewBlog = ({ addBlogPost }) => {
         required
       />
       <Button
-        label="Yeni Blog Ekle"
+        label="Ekle"
         type="submit"
         color="primary"
         size="medium"
