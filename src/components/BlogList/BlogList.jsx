@@ -1,23 +1,9 @@
-import { useState } from "react";
 import BlogItem from "./BlogItem";
 import PropTypes from "prop-types";
 import "./BlogList.css";
 
-const BlogList = ({ blogPosts, handleDeleteBlog, sortByDate }) => {
-  // Arama terimi için state tanımla
-  const [searchTerm, setSearchTerm] = useState("");
-
-  // Arama kutusuna yazılan değeri güncelleyen fonksiyon
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
-  // Filtreleme fonksiyonu: girilen terimi içeren öğeleri döndürür
-  const filteredBlogPosts = blogPosts.filter((item) =>
-    (item.baslik + " " + item.icerik + " " + item.yazar + " " + item.tarih)
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase())
-  );
+const BlogList = ({ searchTerm, handleDeleteBlog, sortByDate, handleSearch, filteredBlogPosts }) => {
+ 
 
   return (
     <div className="blog-list-container">
@@ -47,10 +33,11 @@ const BlogList = ({ blogPosts, handleDeleteBlog, sortByDate }) => {
   );
 };
 BlogList.propTypes = {
-  blogPosts: PropTypes.array.isRequired,
-  handleDeleteBlog: PropTypes.func,
-  handleUpdateBlog: PropTypes.func,
-  sortByDate: PropTypes.func,
+  filteredBlogPosts: PropTypes.array.isRequired,
+  searchTerm: PropTypes.string.isRequired,
+  handleDeleteBlog: PropTypes.func.isRequired,
+  sortByDate: PropTypes.func.isRequired,
+  handleSearch: PropTypes.func.isRequired
 };
 
 export default BlogList;
