@@ -69,7 +69,7 @@ const BlogItem = ({id, baslik, icerik, yazar, tarih, editBlogPost, deleteBlogPos
           </div>
         </div>
       ) : (
-        <form onSubmit={submit} className="form">
+        <form onSubmit={submit} className="card">
           <input
             type="text"
             name="baslik"

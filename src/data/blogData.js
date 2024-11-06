@@ -3,7 +3,7 @@ export const blogData = [
     "baslik": "2024 Sonbahar/Kis Moda Trendleri",
     "icerik": "2024 sonbahar ve kis sezonunda o­ne cikan moda trendlerini kesfedin. Parlak renkler, buyuk omuzlar ve rahat kesimler bu sezonun en dikkat cekici parçalari arasinda. Bu yazida, bu trendleri nasil kombinleyebileceginizi ve stilinizi nasil yansitacaginizı ogrenebilirsiniz.",
     "yazar": "Ece Polat",
-    "tarih": "2024-09-31"
+    "tarih": "2024-09-30"
   },
   {"id":"a6960eed-67a7-4d22-a711-d736099cae66",
     "baslik": "Klasik Parcaların Modern Yorumu",
