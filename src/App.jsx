@@ -4,6 +4,8 @@ import "./App.css";
 import AddNewBlog from "./components/BlogList/AddNewBlog";
 import { useEffect, useState } from "react";
 import staticBlogData from "./data/blogData";
+import 'antd/dist/reset.css';
+import RegisterForm from "./components/Auth/RegisterForm";
 
 const App = () => {
   console.log("App");
@@ -55,6 +57,7 @@ const App = () => {
         editBlogPost={editBlogPost}
       />
       <AddNewBlog addBlogPost={addBlogPost} />
+      <RegisterForm />
     </div>
   );
 };

@@ -15,7 +15,7 @@ const Button = ({
             type={type}
             onClick={onClick}
             disabled={disabled}
-            className={`custom-button ${color} ${size}`} // Renk ve boyut sınıflarını ekle
+            className={`custom-button ${color} ${size} `} // Renk ve boyut sınıflarını ekle
         >
             {label}
         </button>
